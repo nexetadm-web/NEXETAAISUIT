@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create high-converting Ads, Videos, Images & Marketing Content with Nexeta AI Marketing Suite. The all-in-one AI platform for digital marketers, agencies, and brands.">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Nexeta AI Marketing Suite - Scale Your Marketing with AI">
+  <meta property="og:description" content="Generate professional marketing collateral in seconds using our neural creative engine.">
+  <meta property="og:image" content="https://nexeta.ai/assets/og-image.jpg">
+  <meta property="og:type" content="website">
+  
+  <title>Nexeta AI Marketing Suite | Create Ads, Videos & Marketing Content in Seconds</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Glowing Background Orbs -->
+  <div class="glowing-orb" style="top: 10%; left: 5%; width: 500px; height: 500px; background: rgba(59, 130, 246, 0.12);"></div>
+  <div class="glowing-orb" style="top: 30%; right: 5%; width: 600px; height: 600px; background: rgba(139, 92, 246, 0.08);"></div>
+  <div class="glowing-orb" style="bottom: 15%; left: 10%; width: 450px; height: 450px; background: rgba(6, 182, 212, 0.1);"></div>
+
+  <!-- Sticky Header Navigation -->
+  <header class="header" id="main-header">
+    <div class="container header-container">
+      <!-- Logo -->
+      <a href="#home" class="logo" id="header-logo-link">
+        <div class="logo-icon">N</div>
+        <span>Nexeta <span style="font-weight: 400; font-size: 0.95rem; color: var(--accent-cyan); margin-left: 2px;">AI</span></span>
+      </a>
+
+      <!-- Desktop Nav links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">Solutions</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#testimonials">Templates</a></li>
+          <li><a href="#faq">AI Tools</a></li>
+          <li><a href="#footer">Blog</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Header Actions -->
+      <div class="header-actions">
+        <a href="login.html" class="btn btn-outline-subtle" style="padding: 0.6rem 1.2rem; font-size: 0.88rem;" id="login-button">Login</a>
+        <a href="signup.html" class="btn btn-primary" style="padding: 0.6rem 1.25rem; font-size: 0.88rem;" id="get-started-nav-button">Get Started Free</a>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div class="mobile-menu" id="mobile-menu-drawer">
+    <button class="mobile-menu-close" id="mobile-close" aria-label="Close Menu">
+      <i data-lucide="x"></i>
+    </button>
+    <ul class="mobile-nav-links">
+      <li><a href="#home" class="mobile-link">Home</a></li>
+      <li><a href="#features" class="mobile-link">Features</a></li>
+      <li><a href="#how-it-works" class="mobile-link">Solutions</a></li>
+      <li><a href="#pricing" class="mobile-link">Pricing</a></li>
+      <li><a href="#testimonials" class="mobile-link">Templates</a></li>
+      <li><a href="#faq" class="mobile-link">AI Tools</a></li>
+      <li><a href="#footer" class="mobile-link">Blog</a></li>
+      <li><a href="#footer" class="mobile-link">Contact</a></li>
+    </ul>
+    <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem;">
+      <a href="login.html" class="btn btn-outline-subtle" style="width: 100%;" id="mobile-login-button">Login</a>
+      <a href="signup.html" class="btn btn-primary" style="width: 100%;" id="mobile-get-started-button">Get Started Free</a>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <!-- Interactive Background Particles -->
+    <canvas id="particles-js"></canvas>
+    
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge-futuristic">
+          <i data-lucide="sparkles"></i> The Future of Marketing is Neural
+        </div>
+        <h1>
+          Create Ads, Videos, 
+          <span>Images & Marketing</span> 
+          <span class="gradient-text">Content with AI in Seconds.</span>
+        </h1>
+        <p class="hero-subheadline">
+          The All-in-One AI Marketing Platform for Businesses, Agencies, Creators and Digital Marketers. Streamline workflow, cut costs, and boost conversion rates by 250%.
+        </p>
+        <div class="hero-actions">
+          <a href="signup.html" class="btn btn-primary" id="hero-start-free-btn">
+            Start Free <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+          </a>
+          <a href="#demo" class="btn btn-secondary" id="hero-watch-demo-btn">
+            <i data-lucide="play" style="width: 16px; height: 16px; fill: var(--primary);"></i> Watch Demo
+          </a>
+        </div>
+        <div class="hero-features-list">
+          <span><i data-lucide="check-circle-2"></i> No credit card required</span>
+          <span><i data-lucide="check-circle-2"></i> 10,000 Free credits/mo</span>
+          <span><i data-lucide="check-circle-2"></i> Cancel anytime</span>
+        </div>
+      </div>
+      
+      <!-- Interactive AI Dashboard Mockup -->
+      <div class="hero-mockup-wrapper">
+        <div class="hero-mockup">
+          <div class="mockup-header">
+            <div class="mockup-dots">
+              <span class="mockup-dot red"></span>
+              <span class="mockup-dot yellow"></span>
+              <span class="mockup-dot green"></span>
+            </div>
+            <div class="mockup-tabs">
+              <button class="mockup-tab active" data-tab="tab-ads" id="tab-btn-ads">AI Ad Generator</button>
+              <button class="mockup-tab" data-tab="tab-video" id="tab-btn-video">AI Video</button>
+              <button class="mockup-tab" data-tab="tab-image" id="tab-btn-image">AI Images</button>
+              <button class="mockup-tab" data-tab="tab-script" id="tab-btn-script">AI Scripts</button>
+              <button class="mockup-tab" data-tab="tab-analytics" id="tab-btn-analytics">AI Analytics</button>
+            </div>
+          </div>
+          <div class="mockup-content">
+            <!-- TAB: ADS -->
+            <div class="tab-content active" id="tab-ads">
+              <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <span style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 600;">ACTIVE TEMPLATE: FB CONVERSIONS</span>
+                  <span style="font-size: 0.75rem; color: var(--text-muted);"><i data-lucide="sparkles" style="width: 12px; height: 12px; vertical-align: middle;"></i> AI Optimized</span>
+                </div>
+                <div class="prompt-typing-box" id="typing-ads-box">
+                  <!-- JS will dynamically type a marketing prompt here -->
+                  <span class="prompt-cursor"></span>
+                </div>
+                <div class="mockup-card" style="background: rgba(59, 130, 246, 0.05); border-color: rgba(59, 130, 246, 0.2);">
+                  <div style="display: flex; gap: 1rem; align-items: center;">
+                    <div style="width: 40px; height: 40px; border-radius: 8px; background: var(--primary); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">N</div>
+                    <div style="flex-grow: 1;">
+                      <h4 style="color: var(--text-primary); margin: 0; font-size: 0.85rem;">Nexeta AI generated copy</h4>
+                      <p style="color: var(--text-secondary); font-size: 0.75rem; margin: 0;">Ready to boost your campaign ROI by 10x? Let's go!</p>
+                    </div>
+                    <span style="color: var(--success); font-size: 0.8rem; font-weight: 700;"><i data-lucide="trending-up" style="width: 14px; height: 14px; vertical-align: middle;"></i> 9.8 Score</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB: VIDEO -->
+            <div class="tab-content" id="tab-video">
+              <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <h4 style="color: var(--text-primary); font-size: 0.9rem;">AI Video Prompt Render Engine</h4>
+                <div style="background: #000; border-radius: 10px; height: 120px; position: relative; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-color); overflow: hidden;">
+                  <div style="position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.6); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; color: var(--accent-cyan); font-family: monospace;">Render node: US-WEST</div>
+                  <div style="text-align: center; z-index: 2;">
+                    <i data-lucide="loader" class="spin-animation" style="color: var(--primary); width: 28px; height: 28px; margin-bottom: 0.5rem; display: inline-block;"></i>
+                    <p style="font-size: 0.75rem; color: var(--text-secondary);">Generating marketing video segments... 75%</p>
+                  </div>
+                  <div class="mockup-progress-bar" style="position: absolute; bottom: 0; left: 0; margin: 0; border-radius: 0;">
+                    <div class="mockup-progress-fill" style="width: 75%;"></div>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem;">
+                  <div style="flex: 1; height: 35px; background: rgba(255,255,255,0.03); border: 1px dashed var(--border-color); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: var(--text-secondary);"><i data-lucide="plus" style="width: 12px; height: 12px; margin-right: 4px;"></i> Audio layer</div>
+                  <div style="flex: 1; height: 35px; background: rgba(255,255,255,0.03); border: 1px dashed var(--border-color); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: var(--text-secondary);"><i data-lucide="plus" style="width: 12px; height: 12px; margin-right: 4px;"></i> Subtitles</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB: IMAGE -->
+            <div class="tab-content" id="tab-image">
+              <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <h4 style="color: var(--text-primary); font-size: 0.85rem; margin-bottom: 0.25rem;">Generated Product Photos (HD Neural Upscale)</h4>
+                <div class="image-showcase-grid">
+                  <div class="image-item-mock" style="background-image: linear-gradient(135deg, rgba(59,130,246,0.2) 0%, rgba(139,92,246,0.3) 100%);">
+                    <span>Modern Smartwatch</span>
+                  </div>
+                  <div class="image-item-mock" style="background-image: linear-gradient(135deg, rgba(6,182,212,0.2) 0%, rgba(16,185,129,0.3) 100%);">
+                    <span>Wireless Earbuds</span>
+                  </div>
+                  <div class="image-item-mock" style="background-image: linear-gradient(135deg, rgba(245,158,11,0.2) 0%, rgba(239,68,68,0.2) 100%);">
+                    <span>Premium Backpack</span>
+                  </div>
+                  <div class="image-item-mock" style="background-image: linear-gradient(135deg, rgba(139,92,246,0.2) 0%, rgba(6,182,212,0.3) 100%);">
+                    <span>Minimalist Desk Setup</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB: SCRIPT -->
+            <div class="tab-content" id="tab-script">
+              <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <span style="font-size: 0.8rem; color: var(--text-secondary);">AI YouTube Script Writer</span>
+                  <span style="font-size: 0.75rem; color: var(--success);"><i data-lucide="check" style="width: 12px; height: 12px; vertical-align: middle;"></i> Optimized for SEO</span>
+                </div>
+                <div class="prompt-typing-box" id="typing-script-box">
+                  <!-- JS will dynamically type a video script here -->
+                  <span class="prompt-cursor"></span>
+                </div>
+                <div style="display: flex; justify-content: flex-end; gap: 0.5rem;">
+                  <button class="btn btn-outline-subtle" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;"><i data-lucide="copy" style="width: 12px; height: 12px; margin-right: 4px;"></i> Copy</button>
+                  <button class="btn btn-primary" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;"><i data-lucide="repeat" style="width: 12px; height: 12px; margin-right: 4px;"></i> Rephrase</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB: ANALYTICS -->
+            <div class="tab-content" id="tab-analytics">
+              <div class="mockup-dashboard">
+                <div class="mockup-card">
+                  <h4>Total ROI</h4>
+                  <div class="mockup-stat trend-up">+412.5%</div>
+                  <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 4px;">vs previous month</div>
+                </div>
+                <div class="mockup-card">
+                  <h4>Ad Spend Saved</h4>
+                  <div class="mockup-stat">$8,450</div>
+                  <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 4px;">AI optimization model</div>
+                </div>
+                <div class="mockup-card" style="grid-column: 1 / -1;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <h4 style="margin:0;">Conversions over time</h4>
+                    <span style="font-size: 0.7rem; color: var(--success); font-weight: bold;"><i data-lucide="arrow-up-right" style="width: 12px; height: 12px; vertical-align: middle;"></i> Steady Growth</span>
+                  </div>
+                  <!-- Glowing SVG Trend Chart -->
+                  <svg viewBox="0 0 300 60" style="width: 100%; height: 50px; overflow: visible;">
+                    <defs>
+                      <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="var(--primary)" stop-opacity="0.4"/>
+                        <stop offset="100%" stop-color="var(--primary)" stop-opacity="0"/>
+                      </linearGradient>
+                    </defs>
+                    <path d="M 0 50 Q 50 30 100 40 T 200 15 T 300 5 L 300 60 L 0 60 Z" fill="url(#chartGrad)" />
+                    <path d="M 0 50 Q 50 30 100 40 T 200 15 T 300 5" fill="none" stroke="var(--primary)" stroke-width="2" />
+                    <circle cx="300" cy="5" r="4" fill="var(--accent-cyan)" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST SECTION -->
+  <section class="trust">
+    <div class="container">
+      <h2 class="trust-title">Trusted by Digital Marketers & Agencies Worldwide</h2>
+      
+      <!-- Brand Logos Grid -->
+      <div class="trust-logos">
+        <div class="trust-logo" id="logo-stripe"><i data-lucide="wallet" style="width: 18px; height: 18px; color: var(--primary);"></i> STRIPE</div>
+        <div class="trust-logo" id="logo-notion"><i data-lucide="book-open" style="width: 18px; height: 18px; color: var(--text-primary);"></i> NOTION</div>
+        <div class="trust-logo" id="logo-vercel"><i data-lucide="triangle" style="width: 18px; height: 18px; color: var(--text-primary); transform: rotate(180deg);"></i> VERCEL</div>
+        <div class="trust-logo" id="logo-framer"><i data-lucide="layout" style="width: 18px; height: 18px; color: var(--accent-cyan);"></i> FRAMER</div>
+        <div class="trust-logo" id="logo-canva"><i data-lucide="palette" style="width: 18px; height: 18px; color: var(--primary);"></i> CANVA</div>
+      </div>
+
+      <!-- Key Statistics -->
+      <div class="trust-stats">
+        <div class="stat-item">
+          <h3 id="stat-users">150K+</h3>
+          <p>Active Marketers</p>
+        </div>
+        <div class="stat-item">
+          <h3 id="stat-content">24M+</h3>
+          <p>Assets Generated</p>
+        </div>
+        <div class="stat-item">
+          <h3 id="stat-hours">620K</h3>
+          <p>Hours Saved</p>
+        </div>
+        <div class="stat-item">
+          <h3 id="stat-roi">10.2x</h3>
+          <p>Average ROI Boost</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE FEATURES -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-futuristic"><i data-lucide="layers"></i> AI Core Engines</div>
+        <h2>Supercharge Your Campaigns</h2>
+        <p>Explore 27 custom-trained AI marketing tools built to replace manual planning, writing, designing, and optimizing.</p>
+      </div>
+
+      <!-- Feature Explorer Controls -->
+      <div class="explorer-controls">
+        <div class="search-wrapper">
+          <i data-lucide="search" class="search-icon"></i>
+          <input type="text" class="search-input" id="features-search" placeholder="Search AI tools (e.g. video, email, script)..." aria-label="Search features">
+        </div>
+        
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all" id="tab-filter-all">All Tools</button>
+          <button class="filter-tab" data-filter="ads" id="tab-filter-ads">Ads & Copy</button>
+          <button class="filter-tab" data-filter="video" id="tab-filter-video">Video & Design</button>
+          <button class="filter-tab" data-filter="social" id="tab-filter-social">Social Media</button>
+          <button class="filter-tab" data-filter="strategy" id="tab-filter-strategy">SEO & Strategy</button>
+          <button class="filter-tab" data-filter="resources" id="tab-filter-resources">Library & Apps</button>
+        </div>
+      </div>
+
+      <!-- Features Grid (27 Features) -->
+      <div class="features-grid" id="features-grid-container">
+        
+        <!-- Feature 1: AI Ad Creator -->
+        <div class="glass-card feature-card" data-category="ads">
+          <div class="feature-icon-wrapper"><i data-lucide="megaphone"></i></div>
+          <h3>AI Ad Creator</h3>
+          <p>Generate high-converting Facebook, Instagram, Google, and LinkedIn ad copy customized for your product and target audience.</p>
+          <a href="#pricing" class="feature-link">Generate Ads <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 2: AI Video Prompt Generator -->
+        <div class="glass-card feature-card" data-category="video">
+          <div class="feature-icon-wrapper"><i data-lucide="video"></i></div>
+          <h3>AI Video Prompt Generator</h3>
+          <p>Create highly detailed descriptive prompt prompts optimized for Midjourney, Runway Gen-2, and Sora to render breathtaking AI ads.</p>
+          <a href="#pricing" class="feature-link">Create Prompts <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 3: AI Image Prompt Generator -->
+        <div class="glass-card feature-card" data-category="video">
+          <div class="feature-icon-wrapper"><i data-lucide="image"></i></div>
+          <h3>AI Image Prompt Generator</h3>
+          <p>Craft pixel-perfect visual prompts for product shots, marketing graphics, and stock replacement photos using AI image models.</p>
+          <a href="#pricing" class="feature-link">Generate Prompts <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 4: AI Thumbnail Generator -->
+        <div class="glass-card feature-card" data-category="video">
+          <div class="feature-icon-wrapper"><i data-lucide="picture-in-picture"></i></div>
+          <h3>AI Thumbnail Generator</h3>
+          <p>Create visual thumbnail templates and overlay layout suggestions that maximize Click-Through Rates (CTR) on YouTube and social ads.</p>
+          <a href="#pricing" class="feature-link">Design Thumbnails <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 5: AI Script Writer -->
+        <div class="glass-card feature-card" data-category="ads">
+          <div class="feature-icon-wrapper"><i data-lucide="file-text"></i></div>
+          <h3>AI Script Writer</h3>
+          <p>Write complete, engaging narration scripts for commercials, sales pitches, educational webinars, and brand introduction videos.</p>
+          <a href="#pricing" class="feature-link">Write Script <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 6: AI Product Ad Generator -->
+        <div class="glass-card feature-card" data-category="ads">
+          <div class="feature-icon-wrapper"><i data-lucide="shopping-bag"></i></div>
+          <h3>AI Product Ad Generator</h3>
+          <p>Import your Shopify/Amazon products directly to compile creative, high-ROAS product-focused social ads with a single click.</p>
+          <a href="#pricing" class="feature-link">Build Ads <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 7: AI Social Media Post Generator -->
+        <div class="glass-card feature-card" data-category="social">
+          <div class="feature-icon-wrapper"><i data-lucide="share-2"></i></div>
+          <h3>AI Social Media Post Generator</h3>
+          <p>Scale content operations. Build multi-platform post variations optimized for formatting, audience intent, and trending conversations.</p>
+          <a href="#pricing" class="feature-link">Create Posts <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 8: AI Caption Generator -->
+        <div class="glass-card feature-card" data-category="social">
+          <div class="feature-icon-wrapper"><i data-lucide="align-left"></i></div>
+          <h3>AI Caption Generator</h3>
+          <p>Quickly generate catchy, interactive, and conversion-oriented captions for Instagram posts, Pinterest pins, and TikTok videos.</p>
+          <a href="#pricing" class="feature-link">Generate Captions <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 9: AI Hashtag Generator -->
+        <div class="glass-card feature-card" data-category="social">
+          <div class="feature-icon-wrapper"><i data-lucide="hash"></i></div>
+          <h3>AI Hashtag Generator</h3>
+          <p>Analyze caption topics and search parameters to generate hyper-relevant hashtag clouds that boost organic feed impressions.</p>
+          <a href="#pricing" class="feature-link">Find Hashtags <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 10: AI Copywriter -->
+        <div class="glass-card feature-card" data-category="ads">
+          <div class="feature-icon-wrapper"><i data-lucide="pen-tool"></i></div>
+          <h3>AI Copywriter</h3>
+          <p>Utilize proven sales copywriting models like AIDA, PAS, and BAB to draft high-converting hooks, headlines, and landing page content.</p>
+          <a href="#pricing" class="feature-link">Write Copy <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 11: AI Email Writer -->
+        <div class="glass-card feature-card" data-category="ads">
+          <div class="feature-icon-wrapper"><i data-lucide="mail"></i></div>
+          <h3>AI Email Writer</h3>
+          <p>Create cold sales outreach sequences, newsletter broadcasts, and transactional email automations that get opened and clicked.</p>
+          <a href="#pricing" class="feature-link">Compose Email <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 12: AI Blog Writer -->
+        <div class="glass-card feature-card" data-category="ads">
+          <div class="feature-icon-wrapper"><i data-lucide="book-open"></i></div>
+          <h3>AI Blog Writer</h3>
+          <p>Generate detailed, long-form SEO articles from keywords, outlines, or headlines. Complete with formatting, meta titles, and links.</p>
+          <a href="#pricing" class="feature-link">Write Blog <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 13: AI Landing Page Generator -->
+        <div class="glass-card feature-card" data-category="strategy">
+          <div class="feature-icon-wrapper"><i data-lucide="layout"></i></div>
+          <h3>AI Landing Page Generator</h3>
+          <p>Construct structured landing page templates complete with optimized headlines, callouts, features, and HTML layouts ready to publish.</p>
+          <a href="#pricing" class="feature-link">Build Pages <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 14: AI Marketing Strategy Generator -->
+        <div class="glass-card feature-card" data-category="strategy">
+          <div class="feature-icon-wrapper"><i data-lucide="compass"></i></div>
+          <h3>AI Marketing Strategy Generator</h3>
+          <p>Input business metrics and target segments to compile comprehensive quarterly growth strategies, channel allocations, and budgets.</p>
+          <a href="#pricing" class="feature-link">Plan Strategy <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 15: AI Brand Identity Generator -->
+        <div class="glass-card feature-card" data-category="strategy">
+          <div class="feature-icon-wrapper"><i data-lucide="heart"></i></div>
+          <h3>AI Brand Identity Generator</h3>
+          <p>Align brand messages. Generate mission statements, unique selling propositions (USPs), values, voice guides, and brand taglines.</p>
+          <a href="#pricing" class="feature-link">Design Identity <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 16: AI Logo Prompt Generator -->
+        <div class="glass-card feature-card" data-category="video">
+          <div class="feature-icon-wrapper"><i data-lucide="target"></i></div>
+          <h3>AI Logo Prompt Generator</h3>
+          <p>Translate brand metrics into clean vector-style logo design prompts optimized for Midjourney and DALL-E 3 rendering.</p>
+          <a href="#pricing" class="feature-link">Create Logo <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 17: AI Product Description Generator -->
+        <div class="glass-card feature-card" data-category="ads">
+          <div class="feature-icon-wrapper"><i data-lucide="file-edit"></i></div>
+          <h3>AI Product Description Generator</h3>
+          <p>Transform technical product lists into emotional, benefits-focused, and bulleted e-commerce store product descriptions.</p>
+          <a href="#pricing" class="feature-link">Generate Copy <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 18: AI SEO Content Generator -->
+        <div class="glass-card feature-card" data-category="strategy">
+          <div class="feature-icon-wrapper"><i data-lucide="search-code"></i></div>
+          <h3>AI SEO Content Generator</h3>
+          <p>Scan search result gaps to construct content strategies, metadata sets, and keyword dense articles that rank at the top.</p>
+          <a href="#pricing" class="feature-link">Optimize SEO <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 19: AI YouTube Script Generator -->
+        <div class="glass-card feature-card" data-category="video">
+          <div class="feature-icon-wrapper"><i data-lucide="youtube"></i></div>
+          <h3>AI YouTube Script Generator</h3>
+          <p>Write high-retention video outlines, hooks, narration sections, and visual cues mapped to YouTube recommendations.</p>
+          <a href="#pricing" class="feature-link">Write Script <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 20: AI Instagram Reel Generator -->
+        <div class="glass-card feature-card" data-category="video">
+          <div class="feature-icon-wrapper"><i data-lucide="instagram"></i></div>
+          <h3>AI Instagram Reel Generator</h3>
+          <p>Generate trending audio hook guides, storyboard outlines, overlay text, and caption instructions for Instagram Reels.</p>
+          <a href="#pricing" class="feature-link">Plan Reels <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 21: AI Facebook Post Generator -->
+        <div class="glass-card feature-card" data-category="social">
+          <div class="feature-icon-wrapper"><i data-lucide="facebook"></i></div>
+          <h3>AI Facebook Post Generator</h3>
+          <p>Create organic community updates, group engagement posts, and brand news updates tailored for Facebook's feed algorithms.</p>
+          <a href="#pricing" class="feature-link">Build Posts <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 22: AI TikTok Content Generator -->
+        <div class="glass-card feature-card" data-category="video">
+          <div class="feature-icon-wrapper"><i data-lucide="music-4"></i></div>
+          <h3>AI TikTok Content Generator</h3>
+          <p>Draft visual concepts, quick hooks, and TikTok-native video copy structured to trigger viewer interaction and loops.</p>
+          <a href="#pricing" class="feature-link">Plan TikToks <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 23: AI LinkedIn Post Generator -->
+        <div class="glass-card feature-card" data-category="social">
+          <div class="feature-icon-wrapper"><i data-lucide="linkedin"></i></div>
+          <h3>AI LinkedIn Post Generator</h3>
+          <p>Draft professional B2B thought-leadership articles, company accomplishments, and industry insight reports.</p>
+          <a href="#pricing" class="feature-link">Create Posts <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 24: AI Voice Generator -->
+        <div class="glass-card feature-card" data-category="video">
+          <div class="feature-icon-wrapper"><i data-lucide="mic"></i></div>
+          <h3>AI Voice Generator</h3>
+          <p>Convert video scripts into emotional, studio-quality voiceovers in 40+ languages. Fully localized accents and pitches.</p>
+          <a href="#pricing" class="feature-link">Synthesize Voice <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 25: AI Prompt Library -->
+        <div class="glass-card feature-card" data-category="resources">
+          <div class="feature-icon-wrapper"><i data-lucide="library"></i></div>
+          <h3>AI Prompt Library</h3>
+          <p>Access 10,000+ pre-validated, copy-pasteable marketing prompts mapped for Midjourney, ChatGPT, and Claude campaigns.</p>
+          <a href="#pricing" class="feature-link">Browse Library <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 26: AI Course Library -->
+        <div class="glass-card feature-card" data-category="resources">
+          <div class="feature-icon-wrapper"><i data-lucide="graduation-cap"></i></div>
+          <h3>AI Course Library</h3>
+          <p>Learn advanced AI-driven marketing strategies via bite-sized tutorials, masterclasses, and visual workflow blueprints.</p>
+          <a href="#pricing" class="feature-link">Start Learning <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+        <!-- Feature 27: AI Automation Tools -->
+        <div class="glass-card feature-card" data-category="strategy">
+          <div class="feature-icon-wrapper"><i data-lucide="cpu"></i></div>
+          <h3>AI Automation Tools</h3>
+          <p>Set up cross-platform posting, automated copy updates, and self-optimizing ad rotation flows using Webhooks & API connections.</p>
+          <a href="#pricing" class="feature-link">Automate Work <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-futuristic"><i data-lucide="activity"></i> Seamless Workflow</div>
+        <h2>How It Works</h2>
+        <p>Transform raw concepts into production-grade marketing collateral in four simple phases.</p>
+      </div>
+
+      <div class="steps-container">
+        <!-- Connecting Line -->
+        <div class="steps-line"></div>
+
+        <!-- Step 1 -->
+        <div class="step-card">
+          <div class="step-number" id="step-num-1">1</div>
+          <h3>Choose your AI Tool</h3>
+          <p>Select from 27 specialized marketing generators depending on your immediate platform goal.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card">
+          <div class="step-number" id="step-num-2">2</div>
+          <h3>Describe your idea</h3>
+          <p>Type a short description of your product, campaign objectives, and preferred brand tone.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card">
+          <div class="step-number" id="step-num-3">3</div>
+          <h3>AI Generates Results</h3>
+          <p>Our custom-tuned AI engine compiles optimized copies, scripts, assets, or structures in real-time.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step-card">
+          <div class="step-number" id="step-num-4">4</div>
+          <h3>Download & Publish</h3>
+          <p>Review metrics scores, copy text, or export rendered visuals straight to your publishing dashboard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IS IT FOR -->
+  <section class="who-is-it-for">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-futuristic"><i data-lucide="users-2"></i> Targeted Audiences</div>
+        <h2>Who is Nexeta For?</h2>
+        <p>Custom tailored tools designed for fast execution across multiple disciplines.</p>
+      </div>
+
+      <div class="who-grid">
+        <div class="glass-card who-card">
+          <i data-lucide="briefcase"></i>
+          <h3>Business Owners</h3>
+          <p>Generate professional marketing campaigns in-house without the heavy cost of agencies.</p>
+        </div>
+        <div class="glass-card who-card">
+          <i data-lucide="trending-up"></i>
+          <h3>Digital Marketers</h3>
+          <p>Scale copy variations, A/B test outlines, and automate social calendars inside a single hub.</p>
+        </div>
+        <div class="glass-card who-card">
+          <i data-lucide="building-2"></i>
+          <h3>Agencies</h3>
+          <p>Handle 10x more clients by cutting asset creation, script drafting, and planning times from weeks to hours.</p>
+        </div>
+        <div class="glass-card who-card">
+          <i data-lucide="laptop"></i>
+          <h3>Freelancers</h3>
+          <p>Deliver top-tier copywriting, designs, and ad calendars to clients at lightning-fast speeds.</p>
+        </div>
+        <div class="glass-card who-card">
+          <i data-lucide="pen-tool"></i>
+          <h3>Graphic Designers</h3>
+          <p>Bypass creative blocks with descriptive visual prompts and structured layouts built for production.</p>
+        </div>
+        <div class="glass-card who-card">
+          <i data-lucide="clapperboard"></i>
+          <h3>Content Creators</h3>
+          <p>Draft YouTube scripts, TikTok ideas, and optimized reels complete with audio direction suggestions.</p>
+        </div>
+        <div class="glass-card who-card">
+          <i data-lucide="play-circle"></i>
+          <h3>YouTubers</h3>
+          <p>Optimize CTR with catchy titles, detailed outlines, structured scripts, and thumbnail ideas.</p>
+        </div>
+        <div class="glass-card who-card">
+          <i data-lucide="shopping-cart"></i>
+          <h3>E-commerce Sellers</h3>
+          <p>Compile Shopify product descriptions, conversion ads, and product newsletters effortlessly.</p>
+        </div>
+        <div class="glass-card who-card">
+          <i data-lucide="rocket"></i>
+          <h3>Startups</h3>
+          <p>Launch landing pages, strategy models, and pitch copies to validate marketing plans quickly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE NEXETA -->
+  <section class="why-choose">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-futuristic"><i data-lucide="help-circle"></i> The Nexeta Advantage</div>
+        <h2>Why Choose Nexeta?</h2>
+        <p>Discover why 150,000+ marketers trust Nexeta over traditional templates or generic chatbots.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="glass-card why-card">
+          <i data-lucide="zap"></i>
+          <h3>Lightning Fast AI</h3>
+          <p>Get professional copies and high-detail media prompts generated in less than 3 seconds.</p>
+        </div>
+        <div class="glass-card why-card">
+          <i data-lucide="award"></i>
+          <h3>Professional Results</h3>
+          <p>Output matched to world-class copywriting frameworks (AIDA, PAS) for actual conversion performance.</p>
+        </div>
+        <div class="glass-card why-card">
+          <i data-lucide="clock"></i>
+          <h3>Save Time</h3>
+          <p>Reclaim hours spent on brainstorming, writing outlines, and staging product configurations.</p>
+        </div>
+        <div class="glass-card why-card">
+          <i data-lucide="coins"></i>
+          <h3>Save Money</h3>
+          <p>Replace multiple scattered tools with a single central platform containing 27 powerful utilities.</p>
+        </div>
+        <div class="glass-card why-card">
+          <i data-lucide="cloud"></i>
+          <h3>Cloud Based</h3>
+          <p>Access your templates, history, and generated outputs on any device, anywhere in the world.</p>
+        </div>
+        <div class="glass-card why-card">
+          <i data-lucide="smile"></i>
+          <h3>Easy to Use</h3>
+          <p>Designed for humans. Zero learning curve, prompt design expertise, or complex configurations required.</p>
+        </div>
+        <div class="glass-card why-card">
+          <i data-lucide="bot"></i>
+          <h3>24/7 AI Assistant</h3>
+          <p>Your dedicated marketing companion is ready to rephrase, extend, translate, or refine assets round-the-clock.</p>
+        </div>
+        <div class="glass-card why-card">
+          <i data-lucide="layout-grid"></i>
+          <h3>One Platform</h3>
+          <p>Integrates scripts, captions, ads, strategy templates, and assets in a single workspace.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING SECTION -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-futuristic"><i data-lucide="credit-card"></i> Transparent Pricing</div>
+        <h2>Choose the Perfect Plan for Your Business</h2>
+        <p>Simple pricing. No hidden fees. Upgrade anytime as your business grows.</p>
+      </div>
+
+      <!-- Pricing Toggle -->
+      <div class="pricing-toggle-wrapper">
+        <span class="toggle-label active" id="label-monthly">Monthly</span>
+        <button class="pricing-toggle" id="billing-toggle" aria-label="Toggle Billing Cycle"></button>
+        <span class="toggle-label" id="label-yearly">Yearly (Save 20%)</span>
+      </div>
+
+      <!-- Pricing Grid (5 Tiers) -->
+      <div class="pricing-grid">
+        
+        <!-- Plan 1: Explorer -->
+        <div class="glass-card pricing-card" id="pricing-tier-explorer">
+          <div class="tier-name">Explorer</div>
+          <div class="tier-price" id="price-explorer">FREE</div>
+          <p class="tier-desc">Perfect for beginners who want to explore AI marketing tools.</p>
+          <div class="pricing-divider"></div>
+          <ul class="tier-features">
+            <li><i data-lucide="check"></i> 10,000 AI Credits / Month</li>
+            <li><i data-lucide="check"></i> Access to Core AI Marketing Tools</li>
+            <li><i data-lucide="check"></i> AI Ad Generator</li>
+            <li><i data-lucide="check"></i> AI Caption Generator</li>
+            <li><i data-lucide="check"></i> AI Image Prompt Generator</li>
+            <li><i data-lucide="check"></i> AI Script Generator</li>
+            <li><i data-lucide="check"></i> Standard AI Speed</li>
+            <li><i data-lucide="check"></i> Community Support</li>
+          </ul>
+          <a href="#register" class="btn btn-outline-subtle" id="pricing-explorer-btn">Start Free</a>
+        </div>
+
+        <!-- Plan 2: Creator -->
+        <div class="glass-card pricing-card" id="pricing-tier-creator">
+          <div class="tier-name">Creator</div>
+          <div class="tier-price" id="price-creator" data-monthly="15" data-yearly="12">$15<span>/mo</span></div>
+          <p class="tier-desc">Perfect for freelancers, creators and personal brands.</p>
+          <div class="pricing-divider"></div>
+          <ul class="tier-features">
+            <li><i data-lucide="check"></i> 50,000 AI Credits</li>
+            <li><i data-lucide="check"></i> Access to 40+ AI Tools</li>
+            <li><i data-lucide="check"></i> Faster AI Generation</li>
+            <li><i data-lucide="check"></i> AI Prompt Library</li>
+            <li><i data-lucide="check"></i> Save Projects</li>
+            <li><i data-lucide="check"></i> Export without Watermark</li>
+            <li><i data-lucide="check"></i> Priority Email Support</li>
+            <li><i data-lucide="check"></i> Commercial License</li>
+          </ul>
+          <a href="#register" class="btn btn-outline-subtle" id="pricing-creator-btn">Get Creator</a>
+        </div>
+
+        <!-- Plan 3: Pro (Most Popular) -->
+        <div class="glass-card pricing-card premium-tier" id="pricing-tier-pro">
+          <span class="popular-badge">⭐ MOST POPULAR</span>
+          <div class="tier-name">Pro</div>
+          <div class="tier-price" id="price-pro" data-monthly="49" data-yearly="39">$49<span>/mo</span></div>
+          <p class="tier-desc">Designed for professional marketers, agencies and growing businesses.</p>
+          <div class="pricing-divider"></div>
+          <ul class="tier-features">
+            <li><i data-lucide="check"></i> 200,000 AI Credits</li>
+            <li><i data-lucide="check"></i> Unlimited AI Marketing Projects</li>
+            <li><i data-lucide="check"></i> AI Video Prompt Generator</li>
+            <li><i data-lucide="check"></i> AI Product Ad Generator</li>
+            <li><i data-lucide="check"></i> AI Thumbnail Generator</li>
+            <li><i data-lucide="check"></i> AI Voice Generator</li>
+            <li><i data-lucide="check"></i> AI Automation Tools</li>
+            <li><i data-lucide="check"></i> Premium Prompt Library</li>
+            <li><i data-lucide="check"></i> API Access</li>
+            <li><i data-lucide="check"></i> Team Collaboration</li>
+            <li><i data-lucide="check"></i> Priority Support</li>
+          </ul>
+          <a href="#register" class="btn btn-primary" id="pricing-pro-btn">Go Pro</a>
+        </div>
+
+        <!-- Plan 4: Business -->
+        <div class="glass-card pricing-card" id="pricing-tier-business">
+          <div class="tier-name">Business</div>
+          <div class="tier-price" id="price-business" data-monthly="99" data-yearly="79">$99<span>/mo</span></div>
+          <p class="tier-desc">Built for teams, agencies and fast-growing companies.</p>
+          <div class="pricing-divider"></div>
+          <ul class="tier-features">
+            <li><i data-lucide="check"></i> 600,000 AI Credits</li>
+            <li><i data-lucide="check"></i> Unlimited Team Members</li>
+            <li><i data-lucide="check"></i> White Label Branding</li>
+            <li><i data-lucide="check"></i> Custom Workspaces</li>
+            <li><i data-lucide="check"></i> Workflow Automation</li>
+            <li><i data-lucide="check"></i> Webhooks</li>
+            <li><i data-lucide="check"></i> Advanced Analytics</li>
+            <li><i data-lucide="check"></i> Premium API Access</li>
+            <li><i data-lucide="check"></i> Dedicated Success Manager</li>
+            <li><i data-lucide="check"></i> Highest AI Speed</li>
+          </ul>
+          <a href="#register" class="btn btn-outline-subtle" id="pricing-business-btn">Start Business</a>
+        </div>
+
+        <!-- Plan 5: Enterprise -->
+        <div class="glass-card pricing-card" id="pricing-tier-enterprise">
+          <div class="tier-name">Enterprise</div>
+          <div class="tier-price" id="price-enterprise">Custom</div>
+          <p class="tier-desc">Custom AI solutions for large enterprises.</p>
+          <div class="pricing-divider"></div>
+          <ul class="tier-features">
+            <li><i data-lucide="check"></i> Unlimited AI Credits</li>
+            <li><i data-lucide="check"></i> Dedicated AI Infrastructure</li>
+            <li><i data-lucide="check"></i> Custom AI Models</li>
+            <li><i data-lucide="check"></i> Private Cloud Deployment</li>
+            <li><i data-lucide="check"></i> Enterprise Security</li>
+            <li><i data-lucide="check"></i> SSO Login</li>
+            <li><i data-lucide="check"></i> Dedicated Account Manager</li>
+            <li><i data-lucide="check"></i> SLA Guarantee</li>
+            <li><i data-lucide="check"></i> 24/7 Premium Support</li>
+            <li><i data-lucide="check"></i> Custom Integrations</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline-subtle" id="pricing-enterprise-btn">Contact Sales</a>
+        </div>
+
+      </div>
+
+      <!-- Trust highlights below cards -->
+      <div class="pricing-trust-badges" style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 3.5rem; color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;">
+        <span style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="shield-check" style="color: var(--success); width: 18px; height: 18px;"></i> No Credit Card Required</span>
+        <span style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="lock" style="color: var(--success); width: 18px; height: 18px;"></i> Secure Payments</span>
+        <span style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="calendar" style="color: var(--success); width: 18px; height: 18px;"></i> Cancel Anytime</span>
+        <span style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="headphones" style="color: var(--success); width: 18px; height: 18px;"></i> 24/7 Customer Support</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-futuristic"><i data-lucide="heart"></i> User Love</div>
+        <h2>What Marketing Pros Say</h2>
+        <p>See how professional marketers, agency owners, and brands utilize Nexeta to transform their performance.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="glass-card testimonial-card">
+          <div class="stars">
+            <i data-lucide="star" style="fill:#FBBF24;"></i>
+            <i data-lucide="star" style="fill:#FBBF24;"></i>
+            <i data-lucide="star" style="fill:#FBBF24;"></i>
+            <i data-lucide="star" style="fill:#FBBF24;"></i>
+            <i data-lucide="star" style="fill:#FBBF24;"></i>
+          </div>
+          <p class="testimonial-text">"Before Nexeta, our agency spent hours writing individual copy variations for client ads. Now, we produce entire multi-platform calendars in minutes. Our productivity is up 300%."</p>
+          <div class="testimonial-user">
+            <div class="user-avatar" style="background-image: linear-gradient(135deg, var(--primary), var(--accent-cyan));"></div>
+            <div class="user-info">
+              <h4>Sarah Jenkins</h4>
+              <p>Founder, Flow Growth Agency</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="glass-card testimonial-card">
+          <div class="stars">
+            <i data-lucide="star" style="fill:#FBBF24;"></i>
+            <i data-lucide="star" style="fill:#FBBF24;"></i>
+            <i data-lucide="star" style="fill:#FBBF24;"></i>
+            <i data-lucide="star" style="fill:#FBBF24;"></i>
+            <i data-lucide="star" style="fill:#FBBF24;"></i>
+          </div>
+          <p class="testimonial-text">"As an e-commerce seller, writing product descriptions and Facebook ads was always a bottleneck. Nexeta's Shopify import compiles high-scoring product ads instantly."</p>
+          <div class="testimonial-user">
+            <div class="user-avatar" style="background-image: linear-gradient(135deg, var(--accent-cyan), #8B5CF6);"></div>
+            <div class="user-info">
+              <h4>Alex Chen</h4>
+              <p>Operations Director, Aura Wear</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="glass-card testimonial-card">
+          <div class="stars">
+            <i data-lucide="star" style="fill:#FBBF24;"></i>
+            <i data-lucide="star" style="fill:#FBBF24;"></i>
+            <i data-lucide="star" style="fill:#FBBF24;"></i>
+            <i data-lucide="star" style="fill:#FBBF24;"></i>
+            <i data-lucide="star" style="fill:#FBBF24;"></i>
+          </div>
+          <p class="testimonial-text">"The AI Video Prompt Generator is a game-changer. It designs descriptive prompt strings that translate directly into beautiful, cinematic B-roll assets in Runway."</p>
+          <div class="testimonial-user">
+            <div class="user-avatar" style="background-image: linear-gradient(135deg, #8B5CF6, var(--primary));"></div>
+            <div class="user-info">
+              <h4>Marcus Aureli</h4>
+              <p>Creative Director, Zenith Media</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-futuristic"><i data-lucide="help-circle"></i> FAQ</div>
+        <h2>Frequently Asked Questions</h2>
+        <p>Have questions about Nexeta AI? We have answers to help you navigate our marketing ecosystem.</p>
+      </div>
+
+      <div class="faq-container">
+        <!-- FAQ 1 -->
+        <div class="glass-card faq-item" id="faq-1">
+          <div class="faq-header">
+            <span>Which plan is best for beginners?</span>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </div>
+          <div class="faq-content">
+            <p>Our Explorer plan is perfect for beginners. It is 100% free forever, requires no credit card, and gives you 10,000 monthly credits to test the core ad copy, script, and image prompt engines.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="glass-card faq-item" id="faq-2">
+          <div class="faq-header">
+            <span>Can I upgrade anytime?</span>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </div>
+          <div class="faq-content">
+            <p>Yes, you can upgrade, downgrade, or switch your billing cycle at any time from your billing dashboard. The credit differences will be dynamically prorated to your account balance.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="glass-card faq-item" id="faq-3">
+          <div class="faq-header">
+            <span>Can I cancel anytime?</span>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </div>
+          <div class="faq-content">
+            <p>Absolutely. There are no contracts, commitments, or lock-in terms. You can cancel your subscription with a single click in your settings, and you will continue to have premium access until the end of your active billing period.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="glass-card faq-item" id="faq-4">
+          <div class="faq-header">
+            <span>Do you offer refunds?</span>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </div>
+          <div class="faq-content">
+            <p>Yes, we offer a 7-day money-back guarantee for our Creator and Pro plans if you haven't exhausted more than 20% of your monthly credit pool. Simply contact our support desk to request a refund.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="glass-card faq-item" id="faq-5">
+          <div class="faq-header">
+            <span>Do you provide API access?</span>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </div>
+          <div class="faq-content">
+            <p>Yes, API access is available starting on our Pro plan. For high-volume enterprise integrations or dedicated custom AI models, please contact our sales team for custom API parameters.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <!-- Glowing background elements -->
+    <div class="glowing-orb cta-glow-purple"></div>
+    
+    <div class="container">
+      <div class="glass-card cta-box">
+        <h2>Start Creating Professional Marketing Content with AI Today</h2>
+        <p>Join thousands of marketers, creators and businesses using Nexeta AI Marketing Suite. Get started for free.</p>
+        <div class="cta-actions">
+          <a href="signup.html" class="btn btn-primary" id="cta-start-free-btn">Start Free</a>
+          <a href="#contact" class="btn btn-secondary" id="cta-book-demo-btn">Book Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Footer Brand info -->
+        <div class="footer-brand">
+          <a href="#home" class="logo" style="margin-bottom: 1rem;" id="footer-logo-link">
+            <div class="logo-icon">N</div>
+            <span>Nexeta AI</span>
+          </a>
+          <p>World-class AI suite designed to multiply digital marketing performance, copywriting, and asset creation speed.</p>
+          <div class="social-links">
+            <a href="#twitter" class="social-link" aria-label="Twitter"><i data-lucide="twitter" style="width: 16px; height: 16px;"></i></a>
+            <a href="#linkedin" class="social-link" aria-label="LinkedIn"><i data-lucide="linkedin" style="width: 16px; height: 16px;"></i></a>
+            <a href="#github" class="social-link" aria-label="GitHub"><i data-lucide="github" style="width: 16px; height: 16px;"></i></a>
+            <a href="#youtube" class="social-link" aria-label="YouTube"><i data-lucide="youtube" style="width: 16px; height: 16px;"></i></a>
+          </div>
+        </div>
+
+        <!-- Footer Col 1 -->
+        <div class="footer-column">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#features">AI Ad Creator</a></li>
+            <li><a href="#features">AI Video Prompt</a></li>
+            <li><a href="#features">AI Image Prompt</a></li>
+            <li><a href="#features">AI Script Writer</a></li>
+            <li><a href="#features">AI voiceovers</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Col 2 -->
+        <div class="footer-column">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="#how-it-works">For Agencies</a></li>
+            <li><a href="#how-it-works">For Brands</a></li>
+            <li><a href="#how-it-works">For E-commerce</a></li>
+            <li><a href="#how-it-works">For Creators</a></li>
+            <li><a href="#pricing">Enterprise</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Col 3 -->
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#features">Prompt Library</a></li>
+            <li><a href="#features">Course Library</a></li>
+            <li><a href="#faq">FAQ Help Hub</a></li>
+            <li><a href="#testimonials">Customer Stories</a></li>
+            <li><a href="#contact">Support Desk</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Col 4 (Newsletter signup) -->
+        <div class="footer-column">
+          <h4>Subscribe</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">Get weekly AI marketing strategies and framework tips.</p>
+          <form class="newsletter-form" id="newsletter-form-container" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+            <input type="email" class="newsletter-input" placeholder="name@company.com" aria-label="Email address for newsletter" required>
+            <button type="submit" class="btn btn-primary" id="newsletter-submit-btn">
+              <i data-lucide="send" style="width: 14px; height: 14px;"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>&copy; 2026 Nexeta AI Marketing Suite. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms of Service</a>
+          <a href="#security">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lucide Icons Library (via CDN) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+  </script>
+  <!-- Main Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>

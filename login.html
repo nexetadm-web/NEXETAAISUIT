@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Access the Nexeta AI Marketing Suite. Log in to your account to continue creating high-converting ads, videos, copywriting, and neural creative assets.">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Login - Nexeta AI Marketing Suite">
+  <meta property="og:description" content="Sign in to scale your marketing copywriting, ads, and video creation with neural creative engines.">
+  <meta property="og:image" content="https://nexeta.ai/assets/og-image.jpg">
+  <meta property="og:type" content="website">
+  
+  <title>Sign In | Nexeta AI Marketing Suite</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <!-- Floating Glowing Orbs (Matched with Homepage background theme) -->
+  <div class="glowing-orb" style="top: 15%; left: 10%; width: 450px; height: 450px; background: rgba(59, 130, 246, 0.12); filter: blur(130px);"></div>
+  <div class="glowing-orb" style="bottom: 10%; right: 15%; width: 500px; height: 500px; background: rgba(139, 92, 246, 0.08); filter: blur(140px);"></div>
+
+  <!-- Interactive Background Canvas Particles -->
+  <canvas id="particles-js"></canvas>
+
+  <!-- Main Login Page Wrapper -->
+  <main class="login-page-container" id="login-container">
+    <div class="login-split-layout">
+      
+      <!-- LEFT PANEL: Desktop Visual Showcase (Hidden on Tablet & Mobile) -->
+      <section class="login-visual-panel" aria-label="Feature Showcase">
+        
+        <!-- Top branding logo link -->
+        <div class="visual-panel-header">
+          <a href="index.html" class="logo" id="visual-panel-logo">
+            <div class="logo-icon">N</div>
+            <span>Nexeta <span style="font-weight: 400; font-size: 0.95rem; color: var(--accent-cyan); margin-left: 2px;">AI</span></span>
+          </a>
+        </div>
+
+        <!-- Layered interactive 3D elements showcase -->
+        <div class="visual-panel-showcase">
+          <div class="showcase-wrapper">
+            
+            <!-- Animated SVG Neural network connections -->
+            <svg class="neural-svg-bg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Network Links (Paths) -->
+              <path class="neural-link" d="M 50 100 Q 150 60 250 160 T 350 260" stroke-width="1.5" />
+              <path class="neural-link alt" d="M 120 340 Q 220 220 160 110 T 320 60" stroke-width="1.5" />
+              <path class="neural-link" d="M 60 280 C 140 210, 240 330, 330 160" stroke-width="1.2" />
+              <path class="neural-link alt" d="M 250 160 L 160 110" stroke-width="1" />
+              <path class="neural-link" d="M 160 110 L 330 160" stroke-width="1" />
+
+              <!-- Nodes (Neurons) -->
+              <circle class="neural-node" cx="50" cy="100" r="4.5" />
+              <circle class="neural-node cyan" cx="250" cy="160" r="5.5" />
+              <circle class="neural-node purple" cx="350" cy="260" r="4.5" />
+              <circle class="neural-node" cx="120" cy="340" r="5" />
+              <circle class="neural-node cyan" cx="160" cy="110" r="4.5" />
+              <circle class="neural-node purple" cx="320" cy="60" r="6" />
+              <circle class="neural-node" cx="60" cy="280" r="4" />
+              <circle class="neural-node cyan" cx="330" cy="160" r="5" />
+            </svg>
+
+            <!-- Card 1: Campaigns ROI Analytics -->
+            <div class="floating-glass-card card-analytics">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <span style="font-size: 0.72rem; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">AI Conversion Engine</span>
+                <span style="font-size: 0.72rem; color: var(--success); font-weight: bold; display: flex; align-items: center; gap: 2px;">
+                  <i data-lucide="trending-up" style="width: 12px; height: 12px;"></i> ROI Active
+                </span>
+              </div>
+              <div style="font-size: 1.5rem; font-weight: 800; color: #ffffff; margin-bottom: 0.35rem;">+412.5%</div>
+              <div style="font-size: 0.68rem; color: var(--text-muted);">Conversion surge optimized on Meta Ads</div>
+              
+              <!-- Mini Sparkline SVG -->
+              <svg viewBox="0 0 100 25" style="width: 100%; height: 25px; margin-top: 0.75rem; overflow: visible;">
+                <path d="M 0 20 Q 15 10 30 15 T 60 5 T 90 2 L 100 2" fill="none" stroke="var(--primary)" stroke-width="1.8" />
+                <circle cx="90" cy="2" r="2.5" fill="var(--accent-cyan)" />
+              </svg>
+            </div>
+
+            <!-- Card 2: Neural Creative Score -->
+            <div class="floating-glass-card card-ai-score">
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                <div style="width: 28px; height: 28px; border-radius: 6px; background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.2); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan);">
+                  <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i>
+                </div>
+                <div>
+                  <h4 style="font-size: 0.75rem; font-weight: 700; color: #ffffff; margin: 0;">Copywriter AI</h4>
+                  <p style="font-size: 0.65rem; color: var(--text-muted); margin: 0;">Headline Generator V2</p>
+                </div>
+              </div>
+              <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.4rem; font-size: 0.68rem; line-height: 1.3; color: var(--text-secondary); margin-bottom: 0.5rem;">
+                "Scale campaigns effortlessly with 10x content..."
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.68rem; color: var(--text-muted);">Predictive CTR Score:</span>
+                <span style="font-size: 0.72rem; color: var(--success); font-weight: 800;">9.8 / 10</span>
+              </div>
+            </div>
+
+            <!-- Card 3: Video Script Prompt Simulator -->
+            <div class="floating-glass-card card-chat-sim">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                <div style="display: flex; align-items: center; gap: 4px;">
+                  <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--primary); display: inline-block;"></span>
+                  <span style="font-size: 0.7rem; color: var(--text-secondary); font-weight: 500;">AI Video Script Node</span>
+                </div>
+                <span style="font-size: 0.65rem; color: var(--accent-cyan); font-family: monospace;">Render US-EAST</span>
+              </div>
+              
+              <div style="background: rgba(0,0,0,0.25); border: 1px solid var(--border-color); padding: 0.5rem; border-radius: 6px; font-family: monospace; font-size: 0.65rem; line-height: 1.4; color: var(--text-primary); margin-bottom: 0.5rem; min-height: 42px;">
+                Create Instagram Carousel Ad presenting smartwatch...<span style="display: inline-block; width: 5px; height: 10px; background: var(--primary); margin-left: 2px;"></span>
+              </div>
+
+              <!-- Loading progress bar -->
+              <div style="width: 100%; height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden; margin-top: 0.4rem;">
+                <div style="height: 100%; background: linear-gradient(90deg, var(--primary), var(--accent-cyan)); width: 85%;"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.62rem; color: var(--text-muted); margin-top: 0.25rem;">
+                <span>Generating Ad Segments</span>
+                <span>85% completed</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Left Side bottom content -->
+        <div class="visual-panel-footer">
+          <h2>Welcome Back</h2>
+          <p>Sign in to continue creating professional marketing content with AI.</p>
+        </div>
+
+      </section>
+
+      <!-- RIGHT PANEL: Centered Glass Login Card -->
+      <section class="login-form-panel" aria-label="Sign In Panel">
+        
+        <div class="login-card glass-card">
+          
+          <!-- Card Header (Branding & Titles) -->
+          <div class="login-card-header">
+            <!-- App Logo Link -->
+            <a href="index.html" class="logo" id="login-card-logo" aria-label="Back to Homepage">
+              <div class="logo-icon">N</div>
+              <span>Nexeta <span style="font-weight: 400; font-size: 0.95rem; color: var(--accent-cyan); margin-left: 2px;">AI</span></span>
+            </a>
+            <h1>Welcome Back</h1>
+            <p>Sign in to your account</p>
+          </div>
+
+          <!-- Main Input Form -->
+          <!-- Global error banner -->
+          <div id="global-error" role="alert" aria-live="assertive" style="display:none;align-items:center;gap:0.5rem;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.35);color:#fca5a5;padding:0.65rem 1rem;border-radius:10px;font-size:0.83rem;margin-bottom:1rem;"></div>
+
+          <form class="login-form" id="login-form" novalidate>
+            
+            <!-- Email Address field -->
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <div class="input-group">
+                <i data-lucide="mail" class="input-icon" aria-hidden="true"></i>
+                <input 
+                  type="email" 
+                  id="email" 
+                  class="input-field" 
+                  placeholder="name@company.com" 
+                  required
+                  aria-required="true"
+                >
+              </div>
+              <div class="error-text" id="email-error" aria-live="polite"></div>
+            </div>
+
+            <!-- Password field -->
+            <div class="form-group last">
+              <label for="password" class="form-label">Password</label>
+              <div class="input-group">
+                <i data-lucide="lock" class="input-icon" aria-hidden="true"></i>
+                <input 
+                  type="password" 
+                  id="password" 
+                  class="input-field" 
+                  placeholder="••••••••" 
+                  required
+                  aria-required="true"
+                >
+                <!-- Show / Hide Password button -->
+                <button 
+                  type="button" 
+                  class="password-toggle-btn" 
+                  id="toggle-password" 
+                  aria-label="Show password"
+                >
+                  <i data-lucide="eye" class="eye-icon" aria-hidden="true"></i>
+                  <i data-lucide="eye-off" class="eye-off-icon" style="display: none;" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="error-text" id="password-error" aria-live="polite"></div>
+            </div>
+
+            <!-- Remember Me & Forgot Password Options -->
+            <div class="form-options">
+              <label class="checkbox-container" id="remember-me-label">
+                <input type="checkbox" id="remember-me">
+                <span class="checkbox-custom" aria-hidden="true"></span>
+                Remember Me
+              </label>
+              <a href="forgot-password.html" class="forgot-link" id="forgot-password-link">Forgot Password?</a>
+            </div>
+
+            <!-- Primary Sign In Submit Button -->
+            <button type="submit" class="btn-signin" id="signin-btn">
+              <span class="signin-spinner" aria-hidden="true"></span>
+              <span class="btn-text">Sign In</span>
+            </button>
+
+          </form>
+
+          <!-- Social Logins Section -->
+          <div class="social-divider">Or continue with</div>
+          
+          <div class="social-grid">
+            <!-- Google Login -->
+            <button type="button" class="btn-social" id="social-btn-google" aria-label="Continue with Google">
+              <svg class="google-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.24 10.285V13.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.859-3.578-7.859-8s3.53-8 7.859-8c2.46 0 4.105 1.025 5.047 1.926l2.427-2.334C18.155 2.185 15.429 1 12.24 1 5.966 1 1 5.966 1 12.24s4.966 11.24 11.24 11.24c6.543 0 10.89-4.6 10.89-11.096 0-.746-.079-1.312-.176-1.885H12.24z"/>
+              </svg>
+            </button>
+            
+            <!-- Microsoft Login -->
+            <button type="button" class="btn-social" id="social-btn-microsoft" aria-label="Continue with Microsoft">
+              <svg class="microsoft-icon" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h11v11H0zM12 0h11v11H12zM0 12h11v11H0zM12 12h11v11H12z"/>
+              </svg>
+            </button>
+
+            <!-- GitHub Login -->
+            <button type="button" class="btn-social" id="social-btn-github" aria-label="Continue with GitHub">
+              <svg class="github-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Card Bottom Link -->
+          <div class="form-footer">
+            Don't have an account? <a href="signup.html" id="create-account-link">Create Free Account</a>
+          </div>
+
+          <!-- Enterprise-Grade Security Notices -->
+          <div class="security-badges" id="login-security-notice">
+            <div class="security-item">
+              <i data-lucide="shield-check" aria-hidden="true"></i>
+              <span>Protected with enterprise-grade security.</span>
+            </div>
+            <div class="security-item">
+              <i data-lucide="lock" aria-hidden="true"></i>
+              <span>Encrypted login.</span>
+            </div>
+            <div class="security-item">
+              <i data-lucide="users" aria-hidden="true"></i>
+              <span>Trusted by professionals worldwide.</span>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- One-time localStorage repair: removes corrupted demo user record (empty passwordHash)
+       so authService._seedDemoUser() re-creates it with the correct hash on next load. -->
+  <script>
+    (function () {
+      try {
+        var usersRaw = localStorage.getItem('nexeta_users');
+        if (!usersRaw) return;
+        var users = JSON.parse(usersRaw);
+        var demo  = users['sarah@nexeta.ai'];
+        // If the demo user exists but has no passwordHash, delete it so it gets re-seeded correctly.
+        if (demo && !demo.passwordHash) {
+          delete users['sarah@nexeta.ai'];
+          localStorage.setItem('nexeta_users', JSON.stringify(users));
+          console.info('[Nexeta] Cleared corrupted demo user record — will be re-seeded.');
+        }
+      } catch (e) { /* silently ignore */ }
+    })();
+  </script>
+
+  <!-- Environment Configuration -->
+  <script src="env.js"></script>
+
+  <!-- Supabase JS Library (via CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- Supabase Client Settings -->
+  <script src="modules/auth/supabaseClient.js"></script>
+
+  <!-- Auth Foundation (must load first) -->
+  <script src="modules/auth/constants.js"></script>
+  <script src="modules/auth/sessionManager.js"></script>
+  <script src="modules/auth/routeGuard.js"></script>
+  <script src="modules/auth/authService.js"></script>
+  <script src="modules/auth/authState.js"></script>
+  <script src="modules/auth/rbacManager.js"></script>
+  <script src="modules/auth/authLoader.js"></script>
+
+  <!-- Lucide Icons Library (via CDN) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <!-- Page Controller -->
+  <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Verify your email address to activate your Nexeta AI Marketing Suite account.">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Verify Email - Nexeta AI Marketing Suite">
+  <meta property="og:description" content="Click the link in your inbox to activate your Nexeta AI account.">
+  <meta property="og:type" content="website">
+
+  <title>Verify Email | Nexeta AI Marketing Suite</title>
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="login.css">
+
+  <!-- Auth Modules — load in correct order -->
+  <!-- NOTE: No guestGuard on this page — unauthenticated users must access it -->
+  <!-- Environment Configuration -->
+  <script src="env.js"></script>
+
+  <!-- Supabase JS Library & Client Settings -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="modules/auth/supabaseClient.js"></script>
+
+  <script src="modules/auth/constants.js"></script>
+  <script src="modules/auth/sessionManager.js"></script>
+  <script src="modules/auth/routeGuard.js"></script>
+
+  <style>
+    /* Verification spinner (larger than sign-in spinner) */
+    .verify-spinner {
+      width: 48px;
+      height: 48px;
+      border: 3px solid rgba(59, 130, 246, 0.15);
+      border-radius: 50%;
+      border-top-color: var(--primary);
+      animation: signinSpin 0.85s linear infinite;
+      margin: 0 auto 1.5rem auto;
+    }
+
+    /* State panels */
+    .verify-state-panel {
+      text-align: center;
+      padding: 0.5rem 0;
+    }
+
+    .verify-icon-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem auto;
+    }
+
+    .verify-icon-circle.success {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .verify-icon-circle.error {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    /* Go to Dashboard button (full-width, success) */
+    .btn-dashboard {
+      width: 100%;
+      padding: 0.85rem;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-family: var(--font-headings);
+      font-weight: 600;
+      font-size: 0.98rem;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35);
+      transition: var(--transition-normal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-dashboard::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -50%;
+      width: 200%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transform: skewX(-15deg);
+      transition: 0.75s;
+      pointer-events: none;
+    }
+
+    .btn-dashboard:hover::before {
+      left: 120%;
+    }
+
+    .btn-dashboard:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+    }
+
+    .btn-dashboard:active {
+      transform: translateY(0);
+    }
+
+    /* Outlined secondary button */
+    .btn-secondary-outline {
+      width: 100%;
+      padding: 0.78rem;
+      border-radius: 9999px;
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      font-family: var(--font-headings);
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: var(--transition-normal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+
+    .btn-secondary-outline:hover {
+      border-color: var(--border-color-glow);
+      color: var(--text-primary);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    /* Resend button loading state */
+    .btn-secondary-outline.loading {
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    .resend-spinner {
+      display: none;
+      width: 14px;
+      height: 14px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      border-top-color: var(--text-secondary);
+      animation: signinSpin 0.7s linear infinite;
+    }
+
+    .btn-secondary-outline.loading .resend-spinner {
+      display: block;
+    }
+
+    /* Resend success toast */
+    .resend-success-toast {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      color: var(--success);
+      margin-top: 0.65rem;
+      font-weight: 600;
+    }
+
+    .resend-success-toast svg {
+      width: 14px;
+      height: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Glowing Orbs -->
+  <div class="glowing-orb" style="top: 15%; left: 10%; width: 450px; height: 450px; background: rgba(59, 130, 246, 0.12); filter: blur(130px);"></div>
+  <div class="glowing-orb" style="bottom: 10%; right: 15%; width: 500px; height: 500px; background: rgba(139, 92, 246, 0.08); filter: blur(140px);"></div>
+
+  <!-- Interactive Background Canvas Particles -->
+  <canvas id="particles-js"></canvas>
+
+  <!-- Main Page Wrapper -->
+  <main class="login-page-container" id="verify-email-container">
+    <div class="login-split-layout">
+
+      <!-- LEFT PANEL: Visual Showcase -->
+      <section class="login-visual-panel" aria-label="Feature Showcase">
+
+        <!-- Top branding logo link -->
+        <div class="visual-panel-header">
+          <a href="index.html" class="logo" id="visual-panel-logo">
+            <div class="logo-icon">N</div>
+            <span>Nexeta <span style="font-weight: 400; font-size: 0.95rem; color: var(--accent-cyan); margin-left: 2px;">AI</span></span>
+          </a>
+        </div>
+
+        <!-- Layered interactive 3D elements showcase -->
+        <div class="visual-panel-showcase">
+          <div class="showcase-wrapper">
+
+            <!-- Animated SVG Neural network connections -->
+            <svg class="neural-svg-bg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path class="neural-link" d="M 50 100 Q 150 60 250 160 T 350 260" stroke-width="1.5" />
+              <path class="neural-link alt" d="M 120 340 Q 220 220 160 110 T 320 60" stroke-width="1.5" />
+              <path class="neural-link" d="M 60 280 C 140 210, 240 330, 330 160" stroke-width="1.2" />
+              <path class="neural-link alt" d="M 250 160 L 160 110" stroke-width="1" />
+              <path class="neural-link" d="M 160 110 L 330 160" stroke-width="1" />
+
+              <circle class="neural-node" cx="50" cy="100" r="4.5" />
+              <circle class="neural-node cyan" cx="250" cy="160" r="5.5" />
+              <circle class="neural-node purple" cx="350" cy="260" r="4.5" />
+              <circle class="neural-node" cx="120" cy="340" r="5" />
+              <circle class="neural-node cyan" cx="160" cy="110" r="4.5" />
+              <circle class="neural-node purple" cx="320" cy="60" r="6" />
+              <circle class="neural-node" cx="60" cy="280" r="4" />
+              <circle class="neural-node cyan" cx="330" cy="160" r="5" />
+            </svg>
+
+            <!-- Card 1: Campaigns ROI Analytics -->
+            <div class="floating-glass-card card-analytics">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <span style="font-size: 0.72rem; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">AI Conversion Engine</span>
+                <span style="font-size: 0.72rem; color: var(--success); font-weight: bold; display: flex; align-items: center; gap: 2px;">
+                  <i data-lucide="trending-up" style="width: 12px; height: 12px;"></i> ROI Active
+                </span>
+              </div>
+              <div style="font-size: 1.5rem; font-weight: 800; color: #ffffff; margin-bottom: 0.35rem;">+412.5%</div>
+              <div style="font-size: 0.68rem; color: var(--text-muted);">Conversion surge optimized on Meta Ads</div>
+              <svg viewBox="0 0 100 25" style="width: 100%; height: 25px; margin-top: 0.75rem; overflow: visible;">
+                <path d="M 0 20 Q 15 10 30 15 T 60 5 T 90 2 L 100 2" fill="none" stroke="var(--primary)" stroke-width="1.8" />
+                <circle cx="90" cy="2" r="2.5" fill="var(--accent-cyan)" />
+              </svg>
+            </div>
+
+            <!-- Card 2: Neural Creative Score -->
+            <div class="floating-glass-card card-ai-score">
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                <div style="width: 28px; height: 28px; border-radius: 6px; background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.2); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan);">
+                  <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i>
+                </div>
+                <div>
+                  <h4 style="font-size: 0.75rem; font-weight: 700; color: #ffffff; margin: 0;">Copywriter AI</h4>
+                  <p style="font-size: 0.65rem; color: var(--text-muted); margin: 0;">Headline Generator V2</p>
+                </div>
+              </div>
+              <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.4rem; font-size: 0.68rem; line-height: 1.3; color: var(--text-secondary); margin-bottom: 0.5rem;">
+                "Scale campaigns effortlessly with 10x content..."
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.68rem; color: var(--text-muted);">Predictive CTR Score:</span>
+                <span style="font-size: 0.72rem; color: var(--success); font-weight: 800;">9.8 / 10</span>
+              </div>
+            </div>
+
+            <!-- Card 3: Video Script Prompt Simulator -->
+            <div class="floating-glass-card card-chat-sim">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                <div style="display: flex; align-items: center; gap: 4px;">
+                  <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--primary); display: inline-block;"></span>
+                  <span style="font-size: 0.7rem; color: var(--text-secondary); font-weight: 500;">AI Video Script Node</span>
+                </div>
+                <span style="font-size: 0.65rem; color: var(--accent-cyan); font-family: monospace;">Render US-EAST</span>
+              </div>
+              <div style="background: rgba(0,0,0,0.25); border: 1px solid var(--border-color); padding: 0.5rem; border-radius: 6px; font-family: monospace; font-size: 0.65rem; line-height: 1.4; color: var(--text-primary); margin-bottom: 0.5rem; min-height: 42px;">
+                Create Instagram Carousel Ad presenting smartwatch...<span style="display: inline-block; width: 5px; height: 10px; background: var(--primary); margin-left: 2px;"></span>
+              </div>
+              <div style="width: 100%; height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden; margin-top: 0.4rem;">
+                <div style="height: 100%; background: linear-gradient(90deg, var(--primary), var(--accent-cyan)); width: 85%;"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.62rem; color: var(--text-muted); margin-top: 0.25rem;">
+                <span>Generating Ad Segments</span>
+                <span>85% completed</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Left Side bottom content -->
+        <div class="visual-panel-footer">
+          <h2>Check Your Inbox</h2>
+          <p>We sent a verification link to your email address. Click the link to activate your account.</p>
+        </div>
+
+      </section>
+
+      <!-- RIGHT PANEL: Centered Glass Card -->
+      <section class="login-form-panel" aria-label="Email Verification Panel">
+
+        <div class="login-card glass-card" role="main">
+
+          <!-- Card Header -->
+          <div class="login-card-header">
+            <a href="index.html" class="logo" id="verify-card-logo" aria-label="Back to Homepage">
+              <div class="logo-icon">N</div>
+              <span>Nexeta <span style="font-weight: 400; font-size: 0.95rem; color: var(--accent-cyan); margin-left: 2px;">AI</span></span>
+            </a>
+            <h1 id="verify-title">Verify Your Email</h1>
+            <p id="verify-subtitle">Please wait while we verify your email address.</p>
+          </div>
+
+          <!-- STATE A: LOADING (shown on page load while verifying) -->
+          <div id="verify-loading-state" role="status" aria-live="polite" aria-label="Verifying email">
+            <div class="verify-state-panel">
+              <div class="verify-spinner" aria-hidden="true"></div>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; font-weight: 500;">Verifying your email...</p>
+            </div>
+          </div>
+
+          <!-- STATE B: SUCCESS (hidden by default) -->
+          <div id="verify-success-state" style="display: none;" role="status" aria-live="polite">
+            <div class="verify-state-panel">
+              <div class="verify-icon-circle success" aria-hidden="true">
+                <i data-lucide="check-circle" style="width: 40px; height: 40px; color: var(--success);"></i>
+              </div>
+              <h2 style="font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Email Verified!</h2>
+              <p style="color: var(--text-secondary); font-size: 0.93rem; line-height: 1.6; margin-bottom: 2rem;">
+                Your account is now active. You can access the full dashboard.
+              </p>
+              <a
+                href="dashboard.html"
+                class="btn-dashboard"
+                id="verify-dashboard-btn"
+                aria-label="Go to your dashboard"
+              >
+                <i data-lucide="layout-dashboard" style="width: 18px; height: 18px;" aria-hidden="true"></i>
+                Go to Dashboard
+              </a>
+            </div>
+          </div>
+
+          <!-- STATE C: ERROR (hidden by default) -->
+          <div id="verify-error-state" style="display: none;" role="alert" aria-live="assertive">
+            <div class="verify-state-panel">
+              <div class="verify-icon-circle error" aria-hidden="true">
+                <i data-lucide="x-circle" style="width: 40px; height: 40px; color: var(--error);"></i>
+              </div>
+              <h2 style="font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Verification Failed</h2>
+              <p style="color: var(--text-secondary); font-size: 0.93rem; line-height: 1.6; margin-bottom: 1.75rem;">
+                This verification link is invalid or has expired. Please request a new one.
+              </p>
+
+              <!-- Resend Verification Email -->
+              <button
+                type="button"
+                class="btn-signin"
+                id="verify-resend-btn"
+                style="margin-bottom: 0.75rem;"
+                aria-label="Resend verification email"
+              >
+                <span class="signin-spinner" aria-hidden="true"></span>
+                <span class="btn-text">Resend Verification Email</span>
+              </button>
+
+              <!-- Resend success indicator -->
+              <div class="resend-success-toast" id="verify-resend-toast" aria-live="polite">
+                <i data-lucide="check-circle" aria-hidden="true"></i>
+                <span>Verification email sent!</span>
+              </div>
+
+              <!-- Go to Dashboard (secondary) -->
+              <a
+                href="dashboard.html"
+                class="btn-secondary-outline"
+                id="verify-error-dashboard-btn"
+                style="margin-top: 0.75rem;"
+                aria-label="Go to dashboard"
+              >
+                Go to Dashboard
+              </a>
+            </div>
+          </div>
+
+          <!-- Security Badges -->
+          <div class="security-badges" id="verify-security-notice" style="margin-top: 1.75rem;">
+            <div class="security-item">
+              <i data-lucide="shield-check" aria-hidden="true"></i>
+              <span>Verification link is encrypted and one-time use.</span>
+            </div>
+            <div class="security-item">
+              <i data-lucide="clock" aria-hidden="true"></i>
+              <span>Links expire after 24 hours for your security.</span>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Lucide Icons Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Auth Modules -->
+  <script src="modules/auth/authService.js"></script>
+  <script src="modules/auth/authState.js"></script>
+  <script src="modules/auth/rbacManager.js"></script>
+  <script src="modules/auth/authLoader.js"></script>
+
+  <script>
+    'use strict';
+
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    document.addEventListener('DOMContentLoaded', async function () {
+
+      /* ── DOM References ─────────────────────────────────────────────── */
+      const loadingState  = document.getElementById('verify-loading-state');
+      const successState  = document.getElementById('verify-success-state');
+      const errorState    = document.getElementById('verify-error-state');
+      const verifyTitle   = document.getElementById('verify-title');
+      const verifySubtitle = document.getElementById('verify-subtitle');
+      const resendBtn     = document.getElementById('verify-resend-btn');
+      const resendToast   = document.getElementById('verify-resend-toast');
+
+      /* ── State Display Helpers ──────────────────────────────────────── */
+      function showLoading() {
+        loadingState.style.display = 'block';
+        successState.style.display = 'none';
+        errorState.style.display   = 'none';
+      }
+
+      function showSuccess() {
+        loadingState.style.display = 'none';
+        successState.style.display = 'block';
+        errorState.style.display   = 'none';
+        verifyTitle.textContent    = 'Email Verified!';
+        verifySubtitle.textContent = 'Your account is now active and ready.';
+        lucide.createIcons();
+      }
+
+      function showError() {
+        loadingState.style.display = 'none';
+        successState.style.display = 'none';
+        errorState.style.display   = 'block';
+        verifyTitle.textContent    = 'Verification Failed';
+        verifySubtitle.textContent = 'We couldn\'t verify your email address.';
+        lucide.createIcons();
+      }
+
+      /* ── Read Token from URL ────────────────────────────────────────── */
+      const urlParams   = new URLSearchParams(window.location.search);
+      const verifyToken = urlParams.get('token') || '';
+
+      /* ── No Token: Show Error Immediately ───────────────────────────── */
+      if (!verifyToken) {
+        showError();
+        return;
+      }
+
+      /* ── Attempt Verification ───────────────────────────────────────── */
+      showLoading();
+
+      try {
+        if (window.Nexeta && window.Nexeta.AuthService) {
+          await window.Nexeta.AuthService.verifyEmail(verifyToken);
+        } else {
+          // Fallback: simulate async verification
+          await new Promise((resolve, reject) => {
+            setTimeout(() => {
+              // In a real environment without the auth module, show error
+              reject(new Error('Auth service not available.'));
+            }, 1500);
+          });
+        }
+        showSuccess();
+      } catch (err) {
+        console.warn('[VerifyEmail] Verification failed:', err);
+        showError();
+      }
+
+      /* ── Resend Verification Email ──────────────────────────────────── */
+      resendBtn.addEventListener('click', async function () {
+        const btnText   = resendBtn.querySelector('.btn-text');
+        const spinner   = resendBtn.querySelector('.signin-spinner');
+
+        resendBtn.classList.add('loading');
+        btnText.textContent = 'Sending...';
+        resendBtn.setAttribute('aria-busy', 'true');
+        resendBtn.setAttribute('disabled', 'true');
+        resendToast.style.display = 'none';
+
+        try {
+          if (window.Nexeta && window.Nexeta.AuthService) {
+            await window.Nexeta.AuthService.resendVerification();
+          } else {
+            await new Promise(resolve => setTimeout(resolve, 1200));
+          }
+
+          // Show success toast
+          resendToast.style.display = 'flex';
+          lucide.createIcons();
+          btnText.textContent = 'Email Sent!';
+          resendBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+          resendBtn.style.boxShadow  = '0 4px 15px rgba(16, 185, 129, 0.35)';
+
+          // Reset button after 4 seconds
+          setTimeout(() => {
+            btnText.textContent = 'Resend Verification Email';
+            resendBtn.style.background = '';
+            resendBtn.style.boxShadow  = '';
+            resendBtn.classList.remove('loading');
+            resendBtn.removeAttribute('aria-busy');
+            resendBtn.removeAttribute('disabled');
+          }, 4000);
+
+        } catch (err) {
+          console.warn('[VerifyEmail] Resend failed:', err);
+          btnText.textContent = 'Resend Failed — Try Again';
+          resendBtn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+
+          setTimeout(() => {
+            btnText.textContent = 'Resend Verification Email';
+            resendBtn.style.background = '';
+            resendBtn.classList.remove('loading');
+            resendBtn.removeAttribute('aria-busy');
+            resendBtn.removeAttribute('disabled');
+          }, 3000);
+        }
+      });
+
+    }); // end DOMContentLoaded
+  </script>
+
+</body>
+</html>
