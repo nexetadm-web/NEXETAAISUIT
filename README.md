@@ -25,7 +25,7 @@ This repository demonstrates the frontend architecture, UI/UX design and interac
 
 ## 🌐 Live Demo
 
-[**View Nexeta AI Marketing Suite →**]([YOUR-VERCEL-URL](https://nexetaaisuit.vercel.app))
+[**View Nexeta AI Marketing Suite →**]([YOUR-VERCEL-URL]([https://nexetaaisuit.vercel.app](https://nexetaaisuit.vercel.app/)))
 
 ## 🛠️ Tech Stack
 
