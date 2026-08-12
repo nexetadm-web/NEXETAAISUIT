@@ -25,7 +25,33 @@ This repository demonstrates the frontend architecture, UI/UX design and interac
 
 ## 🌐 Live Demo
 
-[**View Nexeta AI Marketing Suite →**](YOUR-VERCEL-URL)
+[**View Nexeta AI Marketing Suite →**]([YOUR-VERCEL-URL](https://nexetaaisuit.vercel.app))
+
+## 🛠️ Tech Stack
+
+- HTML5
+- CSS3
+- JavaScript
+- React
+- Tailwind CSS
+- Responsive Web Design
+- SVG Data Visualization
+- GitHub
+- Vercel
+- ## 🚀 Key Features
+
+- Responsive AI marketing dashboard
+- Authentication UI
+- Login and signup flows
+- Password reset flow
+- Email verification interface
+- AI Assistant interface
+- Marketing campaign workspace
+- Analytics dashboard
+- Interactive data visualization
+- Responsive sidebar navigation
+- Dark/Light theme support
+- React dashboard component
 ## 📁 Repository Structure
 
 *   **Static Pages (No Framework Required)**:
