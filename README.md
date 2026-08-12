@@ -12,7 +12,7 @@ This repository demonstrates the frontend architecture, UI/UX design and interac
 ## 📸 Project Preview
 
 ### Landing Page
-![Nexeta AI Landing Page](screenshots/landing-page.png)
+![Nexeta AI Tools](screenshots/tools-page.png)
 
 ### Dashboard
 ![Nexeta AI Dashboard](screenshots/dashboard.png)
