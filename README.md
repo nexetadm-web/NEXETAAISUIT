@@ -9,6 +9,19 @@ The project includes responsive web interfaces, authentication flows, an interac
 This repository demonstrates the frontend architecture, UI/UX design and interactive functionality developed for the Nexeta AI Marketing Suite.
 
 ---
+## 📸 Project Preview
+
+### Landing Page
+![Nexeta AI Landing Page](screenshots/landing-page.png)
+
+### Dashboard
+![Nexeta AI Dashboard](screenshots/dashboard.png)
+
+### Analytics
+![Nexeta AI Analytics](screenshots/analytics.png)
+
+### AI Assistant
+![Nexeta AI Assistant](screenshots/ai-assistant.png)
 
 ## 📁 Repository Structure
 
