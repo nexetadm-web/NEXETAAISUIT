@@ -1,8 +1,12 @@
-# Nexeta AI Marketing Suite - Premium Frontend Assets
+# Nexeta AI Marketing Suite
 
-Welcome to the premium frontend repository for **Nexeta AI Marketing Suite**, a state-of-the-art AI SaaS platform for creative campaign generation, AI image/video rendering, copy optimization, and marketing analytics.
+> AI-powered SaaS marketing platform for businesses, agencies, creators and digital marketers.
 
-This repository features both **production-ready static HTML/CSS/JS mockups** and a **drop-in React + Tailwind CSS component** for the main dashboard.
+Nexeta AI Marketing Suite is a modern marketing platform concept designed to bring AI-assisted content creation, marketing workflows, campaign management and analytics into a unified workspace.
+
+The project includes responsive web interfaces, authentication flows, an interactive marketing dashboard, analytics visualizations and a modular React dashboard component.
+
+This repository demonstrates the frontend architecture, UI/UX design and interactive functionality developed for the Nexeta AI Marketing Suite.
 
 ---
 
@@ -18,7 +22,7 @@ This repository features both **production-ready static HTML/CSS/JS mockups** an
 
 ---
 
-## 🚀 Running the HTML/JS Mockups
+## 🚀 Running the Web Application
 
 1.  Simply double-click on [`index.html`](index.html) or run a local static server inside this directory (e.g., Live Server extension in VS Code).
 2.  Click **"Sign In"** or **"Get Started"** to navigate to [`login.html`](login.html) and [`signup.html`](signup.html).
