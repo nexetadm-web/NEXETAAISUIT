@@ -22,6 +22,10 @@ This repository demonstrates the frontend architecture, UI/UX design and interac
 
 ### Tools
 ![Nexeta AI Tools](Tools.png)
+
+## 🌐 Live Demo
+
+[**View Nexeta AI Marketing Suite →**](YOUR-VERCEL-URL)
 ## 📁 Repository Structure
 
 *   **Static Pages (No Framework Required)**:
